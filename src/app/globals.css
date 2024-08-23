@@ -1,0 +1,212 @@
+@tailwind base;
+@tailwind components;
+@tailwind utilities;
+
+
+
+@layer base {
+  :root {
+    --background: 0 0% 100%;
+    --foreground: 224 71.4% 4.1%;
+    --card: 0 0% 100%;
+    --card-foreground: 224 71.4% 4.1%;
+    --popover: 0 0% 100%;
+    --popover-foreground: 224 71.4% 4.1%;
+    --primary: 220.9 39.3% 11%;
+    --primary-foreground: 210 20% 98%;
+    --secondary: 220 14.3% 95.9%;
+    --secondary-foreground: 220.9 39.3% 11%;
+    --muted: 220 14.3% 95.9%;
+    --muted-foreground: 220 8.9% 46.1%;
+    --accent: 220 14.3% 95.9%;
+    --accent-foreground: 220.9 39.3% 11%;
+    --destructive: 0 84.2% 60.2%;
+    --destructive-foreground: 210 20% 98%;
+    --border: 220 13% 91%;
+    --input: 220 13% 91%;
+    --ring: 224 71.4% 4.1%;
+    --radius: 1rem;
+    --chart-1: 12 76% 61%;
+    --chart-2: 173 58% 39%;
+    --chart-3: 197 37% 24%;
+    --chart-4: 43 74% 66%;
+    --chart-5: 27 87% 67%;
+  }
+
+  .dark {
+    --background: 224 71.4% 4.1%;
+    --foreground: 210 20% 98%;
+    --card: 224 71.4% 4.1%;
+    --card-foreground: 210 20% 98%;
+    --popover: 224 71.4% 4.1%;
+    --popover-foreground: 210 20% 98%;
+    --primary: 210 20% 98%;
+    --primary-foreground: 220.9 39.3% 11%;
+    --secondary: 215 27.9% 16.9%;
+    --secondary-foreground: 210 20% 98%;
+    --muted: 215 27.9% 16.9%;
+    --muted-foreground: 217.9 10.6% 64.9%;
+    --accent: 215 27.9% 16.9%;
+    --accent-foreground: 210 20% 98%;
+    --destructive: 0 62.8% 30.6%;
+    --destructive-foreground: 210 20% 98%;
+    --border: 215 27.9% 16.9%;
+    --input: 215 27.9% 16.9%;
+    --ring: 216 12.2% 83.9%;
+    --chart-1: 220 70% 50%;
+    --chart-2: 160 60% 45%;
+    --chart-3: 30 80% 55%;
+    --chart-4: 280 65% 60%;
+    --chart-5: 340 75% 55%;
+  }
+}
+
+@layer base {
+  * {
+    @apply border-border;
+  }
+  body {
+    @apply bg-background text-foreground;
+    background: linear-gradient(97deg, #283606, #0F1500);
+    overflow-x: hidden;
+  }
+}
+
+h1{
+  font-family: var(--font-playfair);
+}
+
+p,a{
+  font-family: var(--font-inter);
+}
+
+
+
+/* home page css start */
+.home-hero-section{
+  overflow-x: hidden;
+}
+
+/* hero slider */
+.home-hero-section .swiper-button-prev,
+.swiper-button-next {
+  display: none;
+}
+
+.home-hero-section .swiper-pagination-bullet-active{
+  background: #ffff !important;
+}
+
+.home-hero-section .swiper-pagination-bullet {
+  background: #545454;
+  opacity: var(--swiper-pagination-bullet-inactive-opacity, 1.2);
+}
+
+.home-hero-section .hero {
+  height: 100vh;
+  position: relative;
+}
+
+.home-hero-section .hero-wrapper {
+  position: relative;
+  height: 100vh;
+  overflow: hidden;
+}
+
+.home-hero-section .hero-wrapper::after {
+  content: "";
+  position: absolute;
+  bottom: 0;
+  left: 0;
+  width: 52%;
+  height: 100%; 
+  background: linear-gradient(transparent, #000000); 
+  opacity: 0.52;
+  z-index: 2;
+}
+
+.home-hero-section .parallax-bg {
+  position: absolute;
+  left: 0;
+  top: 0;
+  width: 100%;
+  height: 100%;
+  background-size: cover;
+  background-position: center;
+  z-index: 0;
+}
+
+.home-hero-section .swiper {
+  width: 100%;
+  height: 100%;
+  background: #000;
+}
+
+.home-hero-section .swiper-slide {
+  font-size: 18px;
+  color: #fff;
+  box-sizing: border-box;
+  padding: 40px 60px;
+}
+
+.home-hero-section .swiper-slide .title {
+  font-size: 21px;
+  font-weight: 300;
+}
+
+.home-hero-section .swiper-slide .subtitle {
+  font-size: 41px;
+}
+
+.home-hero-section .swiper-slide .text {
+  font-size: 14px;
+  max-width: 400px;
+  line-height: 1.3;
+}
+
+/* home book ticket slider  */
+
+.home-booktickets-section .swiper {
+  width: 100%;
+  height: 100%;
+  background: transparent;
+}
+
+.home-booktickets-section .swiper-slide {
+  text-align: center;
+  font-size: 18px;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+}
+
+.home-booktickets-section img {
+  display: block;
+  width: 100%;
+  height: 100%;
+  object-fit: cover;
+}
+
+
+
+/* home book ticket slider end */
+
+
+/* Media queries */
+@media (min-width: 800px) and (max-width: 1064px) {
+  /* Add responsive styles here if needed */
+}
+
+@media (min-width: 1055px) and (max-width: 1064px) {
+  /* Add responsive styles here if needed */
+}
+
+@media (min-width: 975px) and (max-width: 1030px) {
+  /* Add responsive styles here if needed */
+}
+
+@media(max-width: 410px) {
+  .home-hero-section .hero-wrapper::after {
+    width: 100%;
+  }
+}
