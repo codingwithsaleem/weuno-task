@@ -15,9 +15,9 @@ const playfair_display = Playfair_Display({
 })
 
 export const metadata = {
-  title: "Glow Scout",
+  title: "Groves",
   description:
-    "Glow Scout is a beauty and wellness platform that connects you to the best spas and salons in your area. Book your next appointment with Glow Scout.",
+    "The New err of Luxery.",
 };
 
 export default function RootLayout({ children }) {
